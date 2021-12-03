@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tambah"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/angka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Angka Pertama"
+        android:inputType="number"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"></EditText>
+    <EditText
+        android:id="@+id/angka2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Angka Kedua"
+        android:inputType="number"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"></EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_gravity="center"
+        android:layout_marginTop="20px"
+        android:onClick="tambah"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:layout_gravity="center"
+        android:layout_marginTop="30px"
+        android:textSize="75px"></TextView>
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_gravity="center"
+        android:layout_marginTop="30px"
+        android:textSize="75px"></TextView>
+
+</LinearLayout>
