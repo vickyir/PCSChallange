@@ -1,5 +1,6 @@
 package com.developer.pcsapi.api
 
+import com.developer.pcsapi.response.admin.AdminResponse
 import com.developer.pcsapi.response.itemTransaksi.itemTransasksiResponsePost
 import com.developer.pcsapi.response.login.LoginResponse
 import com.developer.pcsapi.response.produk.ProdukResponse
@@ -74,4 +75,14 @@ interface ApiEndPoint {
 
     @GET("transaksi")
     fun getLaporan(@Header("Authorization") token : String) : Call<TransaksiResponse>
+
+    @FormUrlEncoded
+    @POST("index")
+
+    fun postAdmin(
+            @Field("email") email : String,
+            @Field("password") password : String,
+            @Field("nama") nama: String
+    ) : Call<AdminResponse>
+
 }

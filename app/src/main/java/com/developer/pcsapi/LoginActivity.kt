@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.developer.pcsapi.api.BaseRetrofit
 import com.developer.pcsapi.response.login.LoginResponse
@@ -37,6 +38,12 @@ class LoginActivity : AppCompatActivity() {
         val btnLogin  = findViewById(R.id.btnLogin) as Button
         val txtEmail = findViewById(R.id.txtEmail) as TextInputEditText
         val txtPassword = findViewById(R.id.txtPassword) as TextInputEditText
+        val txtRegister = findViewById<TextView>(R.id.txtRegister)
+
+        txtRegister.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
         btnLogin.setOnClickListener {
 //            Toast.makeText(this,"Login Proses", Toast.LENGTH_LONG).show()
